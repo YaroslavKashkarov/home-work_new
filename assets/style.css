@@ -1,75 +1,75 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .container {
-    background-color: aquamarine;
-    background-image: url(../images/1559021804_2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
-    display: block;
-    width: min(100%);
-    max-width: 1280px;
-    margin: auto;
+  background-color: aquamarine;
+  background-image: url(../images/1559021804_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  display: block;
+  width: min(100%);
+  max-width: 1280px;
+  margin: auto;
 }
 
 .wrapper {
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    max-width: 992px;
-    margin: auto;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  max-width: 992px;
+  margin: auto;
 }
 
 .carousel {
-    position: relative;
-    background-color: aliceblue;
-    display: flex;
-    max-width: 100%;
-    overflow: hidden;
+  position: relative;
+  background-color: aliceblue;
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .carousel:hover .slide {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 .carousel::after,
 .carousel::before {
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 100%;
-    z-index: 1;
-    top: 0;
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  z-index: 1;
+  top: 0;
 }
 
 .carousel::before {
-    left: 0;
-    background: linear-gradient(to right, rgb(99, 99, 44) 0%, transparent 100%);
+  left: 0;
+  background: linear-gradient(to right, rgb(99, 99, 44) 0%, transparent 100%);
 }
 
 .carousel::after {
-    right: 0;
-    background: linear-gradient(to left, rgb(99, 99, 44) 0%, transparent 100%)
+  right: 0;
+  background: linear-gradient(to left, rgb(99, 99, 44) 0%, transparent 100%);
 }
 
 .slide {
-    display: flex;
-    animation: slideshow 20s linear infinite;
+  display: flex;
+  animation: slideshow 20s linear infinite;
 }
 
 .slide__image {
-    height: 100px;
-    padding: 20px;
+  height: 100px;
+  padding: 20px;
 }
 
 @keyframes slideshow {
-    0% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
 
-    100% {
-        transform: translateX(-100%);
-    }
+  100% {
+    transform: translateX(-100%);
+  }
 }
